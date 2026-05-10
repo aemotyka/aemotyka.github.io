@@ -1,56 +1,68 @@
 # Alex Motyka
 
-**Production AI / ML systems engineer focused on applied ML systems, AWS infrastructure, data pipelines, search, and reliability.**
+I build production AI, data, and cloud systems for messy real-world business problems.
 
-I build and operate production systems that turn messy business problems into reliable internal tools: ML-powered product sourcing, Salesforce-integrated workflows, disaster-recovery reporting, auction-data ingestion, cloud cost reduction, and infrastructure modernization.
+My recent work has focused on AWS infrastructure, applied machine learning systems, Salesforce-integrated workflows, disaster-recovery reporting, search, data pipelines, cost optimization, and legacy system recovery.
 
-## Selected case studies
+I am especially interested in roles where engineering work sits close to business-critical operations: production ML systems, data infrastructure, search/relevance systems, cloud-native applications, and reliability-focused backend platforms.
 
-<div class="grid cards" markdown>
+---
 
--   **CRM-DR: Salesforce disaster-recovery reporting**
+## Selected engineering case studies
 
-    ---
+### [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
 
-    AWS-based reporting continuity system that backs up core Salesforce data daily, publishes queryable curated snapshots, replicates them cross-region, validates freshness and completeness, and exposes Athena reporting surfaces that emulate common SOQL behavior.
+Designed and built a disaster-recovery reporting system that backs up core Salesforce data into AWS, publishes a curated Athena-queryable reporting snapshot, replicates it across regions, validates freshness and consistency, and provides a documented continuity path during a Salesforce outage.
 
-    [:octicons-arrow-right-24: Read case study](case-studies/crm-dr.md)
+**Focus areas:** AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, cross-region replication, CloudWatch alarms, IAM, disaster recovery, schema drift handling.
 
--   **LOTUS: large-scale auction ingestion and search**
+---
 
-    ---
+### [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
 
-    AWS-hosted product-sourcing platform for ingesting, extracting, indexing, and searching upcoming auction lots at global scale.
+Architected an AWS-hosted system for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots from global auction sources. The system is designed around high-volume ingestion, duplicate avoidance, structured extraction, and internal search access for business users.
 
-    [:octicons-arrow-right-24: Read case study](case-studies/lotus.md)
+**Focus areas:** distributed scraping, SQS, ECS/Fargate, S3, RDS PostgreSQL, Terraform, search indexing, structured extraction, cost-aware AWS design.
 
--   **Jewelry recommendation engine**
+---
 
-    ---
+### [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
 
-    Image-similarity and active-learning recommendation system for jewelry auction sourcing, integrated into Salesforce and reworked from an unreliable inherited vendor implementation.
+Reworked an inherited auction recommendation system into a lower-cost AWS pipeline that combines image similarity, keyword matching, and active learning to surface jewelry lots of interest to the buying team through Salesforce.
 
-    [:octicons-arrow-right-24: Read case study](case-studies/jewelry-recommendation-engine.md)
+**Focus areas:** applied ML, image similarity, active learning, Salesforce integration, infrastructure remediation, cost reduction.
 
--   **AWS legacy cleanup and ownership recovery**
+---
 
-    ---
+### [AWS legacy cleanup and ownership recovery](case-studies/aws-legacy-cleanup.md)
 
-    Investigation, documentation, migration, and cost reduction across years of unmanaged AWS infrastructure and business-critical legacy systems.
+Investigated, documented, cleaned up, and stabilized years of unmanaged AWS resources and legacy business applications, reducing monthly spend and restoring operational ownership over previously undocumented systems.
 
-    [:octicons-arrow-right-24: Read case study](case-studies/aws-legacy-cleanup.md)
+**Focus areas:** AWS auditing, cost optimization, Terraform migration, legacy application recovery, documentation, operational risk reduction.
 
-</div>
+---
 
-## Core strengths
+## Technical profile
 
-- Production AI and ML systems
-- AWS architecture and cost control
-- Data pipelines, search, and reporting infrastructure
-- Terraform, GitHub Actions, Docker, and operational documentation
-- Salesforce-integrated business systems
-- Ambiguous technical ownership in under-documented environments
+I work primarily across:
+
+- Python, SQL, TypeScript, C
+- AWS, Terraform, Docker, GitHub Actions
+- S3, ECS/Fargate, SQS, RDS PostgreSQL, Lambda, Step Functions, Glue, Athena, CloudWatch, IAM
+- PyTorch, TensorFlow, scikit-learn, Pandas, NumPy
+- Salesforce development and Salesforce-integrated AWS systems
+
+---
 
 ## Resume
 
+A current resume is available here:
+
 [View resume](resume.md)
+
+---
+
+## Links
+
+- [GitHub](https://github.com/aemotyka)
+- [LinkedIn](https://www.linkedin.com/in/alexandermotyka/)

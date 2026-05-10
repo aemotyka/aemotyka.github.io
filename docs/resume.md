@@ -1,36 +1,20 @@
 # Resume
 
-!!! note "Draft status"
-    This page is a placeholder for the revised resume. The current public resume should be rewritten around production AI systems, AWS infrastructure ownership, Salesforce-integrated data systems, and reliability/cost outcomes before this site is shared broadly.
+My resume is being updated to reflect my current production engineering work across applied ML systems, AWS infrastructure, Salesforce-integrated workflows, data pipelines, disaster-recovery reporting, search, and legacy cloud modernization.
 
-## Alex Motyka
+The current version emphasizes:
 
-New Orleans, LA  
-[GitHub](https://github.com/aemotyka) · [LinkedIn](https://www.linkedin.com/in/alexandermotyka/)
+- Production AI and data systems built for business-critical workflows
+- AWS infrastructure ownership across S3, ECS/Fargate, SQS, RDS, Lambda, Glue, Athena, Step Functions, CloudWatch, IAM, and Terraform
+- Applied machine learning systems involving image similarity, active learning, and large-scale data ingestion
+- Disaster-recovery reporting and data-continuity architecture
+- Cost reduction, documentation, monitoring, and operational ownership of legacy systems
 
-## Target profile
+A polished PDF version will be added here after the case studies and resume rewrite are complete.
 
-Production AI / ML systems engineer with experience designing, building, operating, and documenting AWS-hosted internal systems for data ingestion, ML-assisted product sourcing, Salesforce disaster-recovery reporting, search, and cloud infrastructure modernization.
+## Selected supporting case studies
 
-## Selected experience themes
-
-- Production AI and ML systems
-- AWS architecture, Terraform, Docker, and GitHub Actions
-- Salesforce-integrated business workflows and reporting continuity
-- Large-scale web ingestion, extraction, search indexing, and data pipelines
-- Cloud cost reduction, legacy system recovery, and operational documentation
-
-## Education
-
-**Tulane University — School of Science and Engineering**  
-M.S., Computer Science — Spring 2025  
-B.S., Computer Science; B.S., Economics — Spring 2024
-
-## Certifications
-
-- AWS Certified Solutions Architect – Associate
-- AWS Certified Machine Learning Engineer – Associate — expected
-
-## Full resume
-
-A polished PDF resume will be linked here after the resume rewrite is complete.
+- [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
+- [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
+- [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
+- [AWS legacy cleanup and ownership recovery](case-studies/aws-legacy-cleanup.md)
