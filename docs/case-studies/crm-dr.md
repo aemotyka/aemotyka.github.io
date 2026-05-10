@@ -7,9 +7,25 @@
 
 CRM-DR is a Salesforce disaster-recovery reporting system I designed and built to provide queryable business data during a Salesforce outage.
 
-The system exports core Salesforce objects into AWS every day, publishes a curated reporting snapshot, replicates that snapshot to a disaster-recovery region, validates that the replicated copy is complete and query-ready, and alerts operators if any stage fails or drifts from the expected daily backup.
+The system exports core Salesforce objects into AWS every day, publishes a curated reporting snapshot, replicates that snapshot to a disaster-recovery region, validates that the replicated copy is complete and query-ready, and alerts the maintainer if any stage fails or drifts from the expected daily backup.
 
 The result is a low-cost reporting-continuity layer that gives authorized users a documented way to query recent Salesforce-derived business data from AWS, even during a major Salesforce availability incident.
+
+## At a glance
+
+| Area | Details |
+| --- | --- |
+| Role | Designed and built the system end to end |
+| Problem | Salesforce backups existed, but there was no practical reporting-continuity layer during an outage |
+| Scale | Daily export of core Salesforce objects into AWS |
+| Architecture | AppFlow, S3, Step Functions, Glue, Athena, Lambda, CloudWatch, SNS, KMS, cross-region replication |
+| Reliability model | Publish-only-on-success snapshots with validation, marker state, and DR-readiness checks |
+| Reporting model | Athena tables plus derived SOQL-emulation surfaces for common Salesforce reporting patterns |
+| Cost profile | Under $25/month baseline cost under normal usage; heavier Athena usage only expected during an outage or periodic testing |
+
+## What I owned
+
+I designed and built the system end to end: AWS architecture, Terraform-managed infrastructure, ingestion workflow, snapshot publication logic, DR replication/finalization model, Athena reporting layer, validation checks, monitoring, access model, and internal documentation.
 
 ## Problem
 
@@ -36,7 +52,7 @@ The system needed to meet several practical requirements:
 | Separation between raw ingestion and reporting data | Partial or failed exports should not corrupt the queryable dataset. |
 | Queryable reporting layer | Users needed a way to run familiar business reports outside Salesforce. |
 | Cross-region disaster recovery | Reporting continuity should not depend on a single AWS region. |
-| Automatic schema handling | Salesforce object changes, new fields, and migrations should not require constant manual intervention. |
+| Automatic schema handling | Field-level schema changes for configured Salesforce objects should not require constant manual intervention. |
 | Validation and monitoring | The system needed to prove that the latest copy was fresh, complete, and query-ready. |
 | Low operating cost | The system would run continuously but only see heavy query usage during an outage. |
 | Clear access model and documentation | Non-engineers needed a pre-documented path for using the system during an incident. |
@@ -77,9 +93,10 @@ flowchart LR
     DRGLUE --> DRCATALOG[DR Glue Data Catalog]
     DRCATALOG --> DRATHENA[DR Athena Workgroup]
 
-    SFN --> DQ[Data Quality Checks]
-    DRSFN --> DQ
-    DQ --> CW[CloudWatch Alarms]
+    SFN --> DQ1[Primary data quality checks]
+    DRSFN --> DQ2[DR data quality checks]
+    DQ1 --> CW[CloudWatch Alarms]
+    DQ2 --> CW
     AF --> CW
     CW --> SNS[SNS Alerts]
 
@@ -106,7 +123,7 @@ The DR region does not rerun Salesforce ingestion. It receives the curated repor
 
 Salesforce data is exported into AWS using scheduled AppFlow jobs.
 
-Each configured Salesforce object is exported into an object-scoped raw S3 landing zone. The raw landing zone is intentionally separate from the curated reporting layer. This allows ingestion failures, partial exports, or object-level issues to be detected without immediately affecting the dataset users query.
+Each configured Salesforce object is exported as object-scoped Parquet output into a raw S3 landing zone. The raw landing zone is intentionally separate from the curated reporting layer. This allows ingestion failures, partial exports, or object-level issues to be detected without immediately affecting the dataset users query.
 
 The ingestion layer is responsible for:
 
@@ -179,9 +196,9 @@ This gives the system a clearer readiness model than “the files replicated.”
 
 ## Validation and monitoring
 
-A disaster-recovery reporting system is only useful if operators can trust that it is fresh, complete, and query-ready before an outage occurs.
+A disaster-recovery reporting system is only useful if maintainers can trust that it is fresh, complete, and query-ready before an outage occurs.
 
-CRM-DR includes scheduled validation checks that inspect the latest published state in each region. These checks are designed to catch problems where infrastructure technically ran, but the reporting layer is stale, incomplete, miscataloged, or logically inconsistent.
+CRM-DR includes scheduled Lambda-based validation checks that inspect the latest published state in each region. These checks are designed to catch problems where infrastructure technically ran, but the reporting layer is stale, incomplete, miscataloged, or logically inconsistent.
 
 The validation layer checks for:
 
@@ -203,7 +220,7 @@ The monitoring layer tracks:
 - stale or missing daily run markers
 - data quality validation failures
 
-The goal is to make failures visible and localizable. An operator should be able to tell whether the problem is upstream Salesforce ingestion, primary snapshot publication, cross-region replication, DR finalization, catalog refresh, or data-quality validation.
+The goal is to make failures visible and localizable. A maintainer should be able to tell whether the problem is upstream Salesforce ingestion, primary snapshot publication, cross-region replication, DR finalization, catalog refresh, or data-quality validation.
 
 ## SOQL-emulation reporting layer
 
@@ -315,7 +332,7 @@ The main cost-control decisions were:
 - keeping validation targeted instead of running broad expensive scans
 - using serverless or managed AWS services where possible
 
-Baseline operating cost is very low under normal conditions. During an actual outage, Athena query usage would increase, but that cost increase would be temporary and tied directly to the business-continuity event the system exists to support.
+Baseline operating cost is under $25/month under normal conditions. During an actual outage, Athena query usage would increase, but that cost increase would be temporary and tied directly to the business-continuity event the system exists to support.
 
 ## Result
 
@@ -333,7 +350,7 @@ The final system provides:
 - documented access patterns for authorized users during an outage
 - low baseline operating cost
 
-The most important outcome is operational confidence. The system does not merely store exported data. It verifies that the latest reporting state is fresh, complete, cataloged, queryable, and available from a second region before declaring it ready.
+The most important outcome is operational confidence: the system does not merely store exported data. It verifies that the latest reporting state is fresh, complete, cataloged, queryable, and available from a second region before declaring it ready.
 
 ## What I learned
 
@@ -346,7 +363,7 @@ A backup is only useful if the organization can answer practical questions under
 - Is it queryable?
 - Can the right users access it?
 - Does the data preserve the business semantics people rely on?
-- Will operators know when something is stale, missing, or broken?
+- Will maintainers know when something is stale, missing, or broken?
 
 The hardest part of the project was not exporting Salesforce data into AWS. The harder problem was turning exported data into a trustworthy reporting-continuity layer with validation, schema handling, access control, cross-region readiness, and enough Salesforce-like behavior to support real business workflows.
 
