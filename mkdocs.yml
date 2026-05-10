@@ -1,0 +1,69 @@
+site_name: Alex Motyka
+site_description: Engineering portfolio and case studies for production AI, ML systems, cloud data infrastructure, and reliability work.
+site_author: Alex Motyka
+site_url: https://aemotyka.github.io/
+
+repo_url: https://github.com/aemotyka/aemotyka.github.io
+repo_name: aemotyka/aemotyka.github.io
+
+nav:
+  - Home: index.md
+  - Resume: resume.md
+  - Case Studies:
+      - Overview: case-studies/index.md
+      - CRM-DR: case-studies/crm-dr.md
+      - LOTUS: case-studies/lotus.md
+      - Jewelry Recommendation Engine: case-studies/jewelry-recommendation-engine.md
+      - AWS Legacy Cleanup: case-studies/aws-legacy-cleanup.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: slate
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: slate
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aemotyka
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alexandermotyka/
