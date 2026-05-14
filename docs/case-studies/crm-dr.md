@@ -1,8 +1,5 @@
 # CRM-DR: Salesforce Disaster-Recovery Reporting on AWS
 
-!!! note "Sanitized case study"
-    This is a public engineering case study. Internal account identifiers, repository links, bucket names, ARNs, object lists, and business-sensitive details are intentionally omitted.
-
 ## Summary
 
 CRM-DR is a Salesforce disaster-recovery reporting system I designed and built to provide queryable business data during a Salesforce outage.
