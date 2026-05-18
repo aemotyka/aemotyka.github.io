@@ -1,7 +1,6 @@
 # AWS legacy cleanup and ownership recovery
 
 !!! note "Draft placeholder"
-    This case study should emphasize operational maturity, investigation discipline, cost savings, documentation, and risk reduction.
 
 ## Summary
 

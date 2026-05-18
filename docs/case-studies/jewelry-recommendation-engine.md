@@ -1,7 +1,6 @@
 # Jewelry recommendation engine
 
 !!! note "Draft placeholder"
-    This case study should emphasize production ML, inherited-system repair, cost reduction, Salesforce integration, and honest adoption context.
 
 ## Summary
 
