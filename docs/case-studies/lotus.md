@@ -1,7 +1,6 @@
 # LOTUS: large-scale auction ingestion and search
 
 !!! note "Draft placeholder"
-    This will become the second major case study after CRM-DR is polished.
 
 ## Summary
 
