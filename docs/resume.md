@@ -1,20 +1,22 @@
 # Resume
 
-My resume is being updated to reflect my current production engineering work across applied ML systems, AWS infrastructure, Salesforce-integrated workflows, data pipelines, disaster-recovery reporting, search, and legacy cloud modernization.
+My current resume focuses on production AI systems, AWS infrastructure, applied ML, data pipelines, Salesforce-integrated workflows, disaster-recovery reporting, and internal search systems.
 
-The current version emphasizes:
+A PDF resume will be added after the final formatting pass.
 
-- Production AI and data systems built for business-critical workflows
-- AWS infrastructure ownership across S3, ECS/Fargate, SQS, RDS, Lambda, Glue, Athena, Step Functions, CloudWatch, IAM, and Terraform
-- Applied machine learning systems involving image similarity, active learning, and large-scale data ingestion
-- Disaster-recovery reporting and data-continuity architecture
-- Cost reduction, documentation, monitoring, and operational ownership of legacy systems
+## Current focus
 
-A polished PDF version will be added here after the case studies and resume rewrite are complete.
+- Production AI and ML systems
+- AWS infrastructure and Terraform-managed cloud systems
+- Data ingestion, validation, and reporting pipelines
+- Salesforce-integrated AWS applications
+- Disaster-recovery and business-continuity reporting
+- Search, recommendation, and large-scale data processing systems
+- Legacy cloud remediation, documentation, and cost optimization
 
-## Selected supporting case studies
+## Supporting case studies
 
 - [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
 - [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
 - [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
-- [AWS legacy cleanup and ownership recovery](case-studies/aws-legacy-cleanup.md)
+- [Legacy cloud systems recovery](case-studies/legacy-cloud-systems-recovery.md)
