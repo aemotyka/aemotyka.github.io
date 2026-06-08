@@ -217,7 +217,7 @@ LOTUS is an active MVP with working ingestion, extraction, persistence, indexing
 
 The system is still being hardened. Current work focuses on improving extraction quality, queue behavior, search performance, operational visibility, and the handoff between backend services and user-facing search.
 
-The important distinction is that LOTUS is not a one-off scraper. It is a multi-component product-sourcing platform with durable storage, queue-based processing, structured extraction, search indexing, infrastructure as code, and operational debugging paths.
+The key distinction is that LOTUS is not a one-off scraper. It is a multi-component product-sourcing platform with durable storage, queue-based processing, structured extraction, search indexing, infrastructure as code, and operational debugging paths.
 
 ## Design tradeoffs
 
