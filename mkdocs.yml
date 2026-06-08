@@ -14,7 +14,7 @@ nav:
       - CRM-DR: case-studies/crm-dr.md
       - LOTUS: case-studies/lotus.md
       - Jewelry Recommendation Engine: case-studies/jewelry-recommendation-engine.md
-      - AWS Legacy Cleanup: case-studies/aws-legacy-cleanup.md
+      - Legacy Cloud Systems Recovery: case-studies/legacy-cloud-systems-recovery.md
 
 theme:
   name: material

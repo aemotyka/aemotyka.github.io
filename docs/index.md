@@ -8,37 +8,35 @@ I am especially interested in roles where engineering work sits close to busines
 
 ---
 
-## Selected engineering case studies
+## Featured case study
 
 ### [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
 
-Designed and built a disaster-recovery reporting system that backs up core Salesforce data into AWS, publishes a curated Athena-queryable reporting snapshot, replicates it across regions, validates freshness and consistency, and provides a documented continuity path during a Salesforce outage.
+A production disaster-recovery reporting system for Salesforce data. CRM-DR exports core Salesforce objects into AWS daily, publishes curated Athena-queryable snapshots, replicates the reporting layer across regions, validates freshness and consistency, and provides a documented continuity path during a Salesforce outage.
 
-**Focus areas:** AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, cross-region replication, CloudWatch alarms, IAM, disaster recovery, schema drift handling.
+**Focus areas:** AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, cross-region replication, CloudWatch alarms, IAM, disaster recovery, schema drift handling, SOQL-emulation.
 
 ---
+
+## Case study in progress
 
 ### [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
 
-Architected an AWS-hosted system for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots from global auction sources. The system is designed around high-volume ingestion, duplicate avoidance, structured extraction, and internal search access for business users.
+An AWS-hosted auction ingestion and search platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots from global auction sources.
 
-**Focus areas:** distributed scraping, SQS, ECS/Fargate, S3, RDS PostgreSQL, Terraform, search indexing, structured extraction, cost-aware AWS design.
+**Focus areas:** distributed scraping, SQS, ECS/Fargate, S3, RDS PostgreSQL, Terraform, search indexing, structured extraction, duplicate avoidance, cost-aware AWS design.
 
 ---
+
+## Additional writeups planned
 
 ### [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
 
-Reworked an inherited auction recommendation system into a lower-cost AWS pipeline that combines image similarity, keyword matching, and active learning to surface jewelry lots of interest to the buying team through Salesforce.
+An applied ML system for surfacing auction jewelry lots using image similarity, keyword matching, and active learning, with recommendations integrated into Salesforce.
 
-**Focus areas:** applied ML, image similarity, active learning, Salesforce integration, infrastructure remediation, cost reduction.
+### [Legacy cloud systems recovery](case-studies/legacy-cloud-systems-recovery.md)
 
----
-
-### [AWS legacy cleanup and ownership recovery](case-studies/aws-legacy-cleanup.md)
-
-Investigated, documented, cleaned up, and stabilized years of unmanaged AWS resources and legacy business applications, reducing monthly spend and restoring operational ownership over previously undocumented systems.
-
-**Focus areas:** AWS auditing, cost optimization, Terraform migration, legacy application recovery, documentation, operational risk reduction.
+A cloud infrastructure remediation and recovery effort focused on undocumented AWS resources, business-critical legacy applications, cost reduction, documentation, and operational ownership.
 
 ---
 
@@ -56,7 +54,7 @@ I work primarily across:
 
 ## Resume
 
-A current resume is available here:
+A current resume page is available here:
 
 [View resume](resume.md)
 
