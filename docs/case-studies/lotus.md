@@ -21,7 +21,7 @@ The project is designed around high-volume ingestion, duplicate avoidance, struc
 | Architecture | ECS/Fargate, SQS, S3, RDS PostgreSQL, DynamoDB, Terraform, GitHub Actions, API/UI, search indexing |
 | Reliability model | Queue-based processing, raw artifact retention, duplicate tracking, DLQs, logs, health checks, and scheduled workflows |
 | User surface | Internal search UI/API for buying-team access |
-| Status | Production-oriented MVP in active development |
+| Status | Production-oriented MVP under active development |
 
 ## Problem
 
