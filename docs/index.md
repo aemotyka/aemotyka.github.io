@@ -1,10 +1,10 @@
 # Alex Motyka
 
-I build and operate cloud-backed business applications: infrastructure, backend services, deployment pipelines, data workflows, and the debugging paths that keep them usable after launch.
+I build cloud-backed business applications and the infrastructure they run on: backend services, deployment pipelines, data workflows, and operational tooling.
 
-My recent work has been less about demos and more about getting real systems into production: AWS infrastructure, Terraform, ECS/Fargate services, GitHub Actions deployments, PostgreSQL-backed data models, search/indexing workflows, SQS pipelines, logging, IAM, and operational cleanup.
+Most of my recent work has been production delivery: AWS infrastructure, Terraform, ECS/Fargate, GitHub Actions, PostgreSQL-backed services, search/indexing workflows, SQS pipelines, logging, IAM, and cleanup of inherited systems.
 
-I am looking for cloud engineering, backend/platform, DevOps, and infrastructure-heavy software roles where the work is tied to production systems instead of toy projects.
+I am looking for cloud engineering, backend/platform, DevOps, and infrastructure-heavy software roles tied to production systems.
 
 ---
 
@@ -14,7 +14,7 @@ I am looking for cloud engineering, backend/platform, DevOps, and infrastructure
 
 LOTUS v1 launched as an internal product for discovering, processing, indexing, and searching upcoming auction lots.
 
-My work focused on the production path around the application: AWS infrastructure, Terraform-managed environments, service deployment, queueing, storage, database integration, scheduled jobs, secrets/IAM, and operational debugging across scraper, extractor, indexer, API, UI, and DDL components.
+My work covered the production path around the application: AWS infrastructure, Terraform-managed environments, service deployment, queueing, storage, database integration, scheduled jobs, secrets/IAM, and operational debugging across scraper, extractor, indexer, API, UI, and DDL components.
 
 **Core stack:** AWS, Terraform, ECS/Fargate, SQS, S3, RDS PostgreSQL, DynamoDB, ElastiCache/Valkey, CloudWatch, GitHub Actions, Docker, Python, SQL.
 

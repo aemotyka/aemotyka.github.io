@@ -1,12 +1,12 @@
 # Resume
 
-My current resume focuses on production AI systems, AWS infrastructure, applied ML, data pipelines, Salesforce-integrated workflows, disaster-recovery reporting, and internal search systems.
+My resume should lead with AWS infrastructure, backend systems, data pipelines, disaster-recovery reporting, internal search systems, and production application delivery.
 
 A PDF resume will be added after the final formatting pass.
 
 ## Current focus
 
-- Production AI and ML systems
+- Production cloud and backend systems
 - AWS infrastructure and Terraform-managed cloud systems
 - Data ingestion, validation, and reporting pipelines
 - Salesforce-integrated AWS applications
@@ -17,6 +17,6 @@ A PDF resume will be added after the final formatting pass.
 ## Supporting case studies
 
 - [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
-- [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
+- [LOTUS: internal auction ingestion and search platform](case-studies/lotus.md)
 - [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
 - [Legacy cloud systems recovery](case-studies/legacy-cloud-systems-recovery.md)

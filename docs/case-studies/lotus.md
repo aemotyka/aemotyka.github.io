@@ -7,9 +7,9 @@
 
 LOTUS v1 launched as an internal auction ingestion and search platform.
 
-The system gives users a way to search upcoming auction inventory that has been discovered, scraped, extracted, stored, indexed, and exposed through an internal API/UI. My work focused on the production engineering around that system: infrastructure, deployment, environment management, queues, storage, service configuration, IAM, logging, and launch-readiness debugging.
+The system lets users search upcoming auction inventory that has been discovered, scraped, extracted, stored, indexed, and exposed through an internal API/UI. My work covered the production engineering around that system: infrastructure, deployment, environment management, queues, storage, service configuration, IAM, logging, and launch-readiness debugging.
 
-This was not a demo app. The hard part was turning a messy external-data workflow into something that could be deployed, operated, inspected, and fixed.
+The work was mostly operational: turn a messy external-data workflow into something deployable, inspectable, and fixable.
 
 ## What I worked on
 
@@ -77,7 +77,7 @@ The production environment includes ECS/Fargate task definitions and services fo
 
 Deployment is handled through GitHub Actions workflows. Application repos build Docker images, push them to ECR, render updated ECS task definitions, and update the correct ECS service when deployment is enabled for that environment.
 
-The important part is not that these services exist. The important part is that they are wired together in a repeatable way, with environment-specific config, deployment gates, tagged task definitions, and operational hooks for debugging.
+The useful part is the wiring: environment-specific config, deployment gates, tagged task definitions, and operational hooks for debugging.
 
 ## Queueing and failure handling
 
@@ -108,7 +108,7 @@ The v1 launch work was mostly practical production engineering:
 - validate active search/index behavior before launch
 - document and communicate user-facing rollout steps
 
-This is the kind of work that does not look flashy in a screenshot but determines whether the system is actually usable.
+That work decides whether the system is usable, even when it does not produce a clean screenshot.
 
 ## Result
 
@@ -118,6 +118,6 @@ The system now has a production path across scraper, extractor, indexer, API, UI
 
 ## What I learned
 
-The hard part of production scraping is not fetching pages. It is identity, state, retries, parent-child relationships, source drift, partial failure, observability, and keeping infrastructure aligned with how the application actually runs.
+Production scraping breaks around identity, state, retries, parent-child relationships, source drift, partial failure, observability, and infrastructure drift.
 
-LOTUS was useful experience because it forced the work out of notebook/demo territory and into production application delivery.
+LOTUS was useful because it required production delivery instead of a notebook or prototype.

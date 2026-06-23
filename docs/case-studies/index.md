@@ -1,8 +1,8 @@
 # Engineering Case Studies
 
-These are sanitized writeups of production systems I designed, built, operated, or significantly remediated.
+Sanitized writeups from production systems I built, operated, or helped recover.
 
-The focus is practical engineering: architecture, infrastructure, deployment, reliability, debugging, cost control, and business impact.
+Main areas: architecture, infrastructure, deployments, reliability, debugging, cost control, and business impact.
 
 ---
 
@@ -10,7 +10,7 @@ The focus is practical engineering: architecture, infrastructure, deployment, re
 
 ### [LOTUS: internal auction ingestion and search platform](lotus.md)
 
-An internal platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots. My work focused on the production cloud path: Terraform-managed AWS infrastructure, ECS/Fargate services, SQS queues and DLQs, S3 artifacts, RDS PostgreSQL integration, DynamoDB state/cache tables, GitHub Actions deployments, scheduled jobs, service secrets, IAM, logging, and launch-readiness debugging.
+An internal platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots. My work covered the production cloud path: Terraform-managed AWS infrastructure, ECS/Fargate services, SQS queues and DLQs, S3 artifacts, RDS PostgreSQL integration, DynamoDB state/cache tables, GitHub Actions deployments, scheduled jobs, service secrets, IAM, logging, and launch-readiness debugging.
 
 **Core themes:** AWS infrastructure, Terraform, ECS/Fargate, queue-based processing, production deployments, search indexing, PostgreSQL, operational debugging.
 
