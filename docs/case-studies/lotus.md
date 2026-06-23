@@ -19,7 +19,7 @@ This was not a demo app. The hard part was turning a messy external-data workflo
 | Runtime | ECS/Fargate task definitions and services for scraper, extractor, indexer, API, UI, and DDL components |
 | Deployment | GitHub Actions workflows that build images, push to ECR, render ECS task definitions, and update services |
 | Data flow | SQS queues and DLQs for auction and lot discovery/extraction stages |
-| Storage | S3 paths for raw HTML, indexes, model/extractor output, logs, and search traces |
+| Storage | S3 paths for raw HTML, indexes, extraction outputs, logs, and search traces |
 | Persistence | RDS PostgreSQL integration for normalized auction/lot data and DDL-managed schema changes |
 | State/cache | DynamoDB tables for seen-state and query/cache use cases; Valkey/Redis for API search context |
 | Operations | CloudWatch logs, S3 logs, task env management, ECS Exec support, queue/DLQ cleanup, launch debugging |
