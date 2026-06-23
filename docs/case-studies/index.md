@@ -1,41 +1,33 @@
 # Engineering Case Studies
 
-These case studies are sanitized writeups of production systems I designed, built, operated, or significantly remediated.
+Sanitized writeups from production systems I built, operated, or helped recover.
 
-They focus on problem framing, architecture, tradeoffs, reliability, cost control, operational ownership, and business impact.
+Main areas: architecture, infrastructure, deployments, reliability, debugging, cost control, and business impact.
 
 ---
 
 ## Published
 
+### [LOTUS: internal auction ingestion and search platform](lotus.md)
+
+An internal platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots. My work covered the production cloud path: Terraform-managed AWS infrastructure, ECS/Fargate services, SQS queues and DLQs, S3 artifacts, RDS PostgreSQL integration, DynamoDB state/cache tables, GitHub Actions deployments, scheduled jobs, service secrets, IAM, logging, and launch-readiness debugging.
+
+**Core themes:** AWS infrastructure, Terraform, ECS/Fargate, queue-based processing, production deployments, search indexing, PostgreSQL, operational debugging.
+
 ### [CRM-DR: Salesforce disaster-recovery reporting on AWS](crm-dr.md)
 
-A disaster-recovery reporting system that exports core Salesforce data into AWS, publishes curated Athena-queryable snapshots, replicates the reporting layer across regions, validates data freshness and consistency, and provides a documented continuity path during a Salesforce outage.
+A disaster-recovery reporting system that exports Salesforce data into AWS, publishes curated Athena-queryable snapshots, validates freshness and consistency, and provides a documented continuity path during a Salesforce outage.
 
-**Core themes:** disaster recovery, data pipelines, AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, cross-region replication, monitoring, schema drift handling, SOQL-emulation.
-
----
-
-## In progress
-
-### [LOTUS: large-scale auction ingestion and search platform](lotus.md)
-
-An AWS-hosted auction ingestion and search platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots from global auction sources.
-
-**Core themes:** distributed scraping, queue-based processing, structured extraction, duplicate avoidance, RDS PostgreSQL, ECS/Fargate, S3, SQS, Terraform, search indexing, internal search tooling.
+**Core themes:** disaster recovery, data pipelines, AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, monitoring, schema drift handling.
 
 ---
 
-## Planned
-
-### [Jewelry recommendation engine](jewelry-recommendation-engine.md)
-
-An applied ML system for surfacing auction jewelry lots of interest using image similarity, keyword matching, and active learning, with recommendations integrated into Salesforce.
-
-**Core themes:** image similarity, active learning, Salesforce integration, inherited system remediation, AWS cost reduction, internal product delivery.
+## Planned / older writeups
 
 ### [Legacy cloud systems recovery](legacy-cloud-systems-recovery.md)
 
-A cloud infrastructure remediation and recovery effort focused on investigating unmanaged AWS resources, stabilizing business-critical legacy systems, reducing spend, documenting ownership, and restoring operational control.
+A cloud infrastructure remediation effort focused on investigating unmanaged AWS resources, stabilizing business-critical legacy systems, reducing spend, documenting ownership, and restoring operational control.
 
-**Core themes:** AWS auditing, cost optimization, Terraform migration, legacy application recovery, documentation, operational risk reduction.
+### [Jewelry recommendation engine](jewelry-recommendation-engine.md)
+
+Applied ML and data workflow work for surfacing auction jewelry lots using image similarity, keyword matching, active learning, and Salesforce-integrated review paths.
