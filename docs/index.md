@@ -1,42 +1,38 @@
 # Alex Motyka
 
-I build production AI, data, and cloud systems for messy real-world business problems.
+I build and operate cloud-backed business applications: infrastructure, backend services, deployment pipelines, data workflows, and the debugging paths that keep them usable after launch.
 
-My recent work has focused on AWS infrastructure, applied machine learning systems, Salesforce-integrated workflows, disaster-recovery reporting, search, data pipelines, cost optimization, and legacy system recovery.
+My recent work has been less about demos and more about getting real systems into production: AWS infrastructure, Terraform, ECS/Fargate services, GitHub Actions deployments, PostgreSQL-backed data models, search/indexing workflows, SQS pipelines, logging, IAM, and operational cleanup.
 
-I am especially interested in roles where engineering work sits close to business-critical operations: production ML systems, data infrastructure, search/relevance systems, cloud-native applications, and reliability-focused backend platforms.
+I am looking for cloud engineering, backend/platform, DevOps, and infrastructure-heavy software roles where the work is tied to production systems instead of toy projects.
 
 ---
 
-## Featured case study
+## Featured work
+
+### [LOTUS: internal auction ingestion and search platform](case-studies/lotus.md)
+
+LOTUS v1 launched as an internal product for discovering, processing, indexing, and searching upcoming auction lots.
+
+My work focused on the production path around the application: AWS infrastructure, Terraform-managed environments, service deployment, queueing, storage, database integration, scheduled jobs, secrets/IAM, and operational debugging across scraper, extractor, indexer, API, UI, and DDL components.
+
+**Core stack:** AWS, Terraform, ECS/Fargate, SQS, S3, RDS PostgreSQL, DynamoDB, ElastiCache/Valkey, CloudWatch, GitHub Actions, Docker, Python, SQL.
+
+---
+
+## Other case studies
 
 ### [CRM-DR: Salesforce disaster-recovery reporting on AWS](case-studies/crm-dr.md)
 
-A production disaster-recovery reporting system for Salesforce data. CRM-DR exports core Salesforce objects into AWS daily, publishes curated Athena-queryable snapshots, replicates the reporting layer across regions, validates freshness and consistency, and provides a documented continuity path during a Salesforce outage.
-
-**Focus areas:** AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, cross-region replication, CloudWatch alarms, IAM, disaster recovery, schema drift handling, SOQL-emulation.
-
----
-
-## Case study in progress
-
-### [LOTUS: large-scale auction ingestion and search platform](case-studies/lotus.md)
-
-An AWS-hosted auction ingestion and search platform for discovering, scraping, extracting, storing, indexing, and searching upcoming auction lots from global auction sources.
-
-**Focus areas:** distributed scraping, SQS, ECS/Fargate, S3, RDS PostgreSQL, Terraform, search indexing, structured extraction, duplicate avoidance, cost-aware AWS design.
-
----
-
-## Additional writeups planned
-
-### [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
-
-An applied ML system for surfacing auction jewelry lots using image similarity, keyword matching, and active learning, with recommendations integrated into Salesforce.
+A disaster-recovery reporting system for Salesforce data using AWS AppFlow, S3, Glue, Athena, Step Functions, Lambda, KMS, replication, validation, and monitoring.
 
 ### [Legacy cloud systems recovery](case-studies/legacy-cloud-systems-recovery.md)
 
-A cloud infrastructure remediation and recovery effort focused on undocumented AWS resources, business-critical legacy applications, cost reduction, documentation, and operational ownership.
+Investigation and remediation work around inherited AWS resources, business-critical legacy systems, cost reduction, documentation, and operational ownership.
+
+### [Jewelry recommendation engine](case-studies/jewelry-recommendation-engine.md)
+
+Applied ML and data pipeline work for surfacing auction jewelry lots through image similarity, keyword matching, active learning, and Salesforce-integrated workflows.
 
 ---
 
@@ -44,23 +40,15 @@ A cloud infrastructure remediation and recovery effort focused on undocumented A
 
 I work primarily across:
 
-- Python, SQL, TypeScript, C
+- Python, SQL, TypeScript, shell
 - AWS, Terraform, Docker, GitHub Actions
-- S3, ECS/Fargate, SQS, RDS PostgreSQL, Lambda, Step Functions, Glue, Athena, CloudWatch, IAM
-- PyTorch, TensorFlow, scikit-learn, Pandas, NumPy
-- Salesforce development and Salesforce-integrated AWS systems
+- ECS/Fargate, SQS, S3, RDS PostgreSQL, DynamoDB, Lambda, Step Functions, Glue, Athena, CloudWatch, IAM
+- Backend services, deployment pipelines, data pipelines, search/indexing workflows, and operational debugging
 
 ---
 
-## Resume
+## Resume and links
 
-A current resume page is available here:
-
-[View resume](resume.md)
-
----
-
-## Links
-
+- [Resume](resume.md)
 - [GitHub](https://github.com/aemotyka)
 - [LinkedIn](https://www.linkedin.com/in/alexandermotyka/)

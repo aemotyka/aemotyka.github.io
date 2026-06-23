@@ -1,5 +1,5 @@
 site_name: Alex Motyka
-site_description: Engineering portfolio and case studies for production AI, ML systems, cloud data infrastructure, and reliability work.
+site_description: Engineering portfolio and case studies for cloud infrastructure, backend systems, data pipelines, and production application delivery.
 site_author: Alex Motyka
 site_url: https://aemotyka.github.io/
 
@@ -11,8 +11,8 @@ nav:
   - Resume: resume.md
   - Case Studies:
       - Overview: case-studies/index.md
-      - CRM-DR: case-studies/crm-dr.md
       - LOTUS: case-studies/lotus.md
+      - CRM-DR: case-studies/crm-dr.md
       - Jewelry Recommendation Engine: case-studies/jewelry-recommendation-engine.md
       - Legacy Cloud Systems Recovery: case-studies/legacy-cloud-systems-recovery.md
 
