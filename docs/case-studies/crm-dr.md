@@ -362,7 +362,7 @@ A backup is only useful if the organization can answer practical questions under
 - Does the data preserve the business semantics people rely on?
 - Will maintainers know when something is stale, missing, or broken?
 
-Exporting Salesforce data was the easy part. The harder problem was turning exported data into a trustworthy reporting-continuity layer with validation, schema handling, access control, cross-region readiness, and enough Salesforce-like behavior to support real business workflows.
+The main challenge was turning exported Salesforce data into a trustworthy reporting-continuity layer with validation, schema handling, access control, cross-region readiness, and enough Salesforce-like behavior to support real business workflows.
 
 Engineering takeaways:
 

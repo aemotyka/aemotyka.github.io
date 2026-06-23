@@ -1,6 +1,6 @@
 # Resume
 
-My resume should lead with AWS infrastructure, backend systems, data pipelines, disaster-recovery reporting, internal search systems, and production application delivery.
+My resume covers AWS infrastructure, backend systems, data pipelines, disaster-recovery reporting, internal search systems, and production application delivery.
 
 A PDF resume will be added after the final formatting pass.
 
